@@ -36,9 +36,7 @@ public class OrderController {
                 .bodyValue(status)
                 .retrieve()
                 .bodyToMono(String.class)
-                .subscribe(message ->{
-                    System.out.println("Message:"+message);
-                });
+                .subscribe(message -> System.out.println("Message:"+message));
         return "Order Status Change Received";
     }
 
